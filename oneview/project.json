@@ -1,0 +1,57 @@
+{
+  "name": "oneview",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@analogjs/platform:vite",
+      "defaultConfiguration": "production",
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "sourcemap": false,
+          "mode": "production"
+        }
+      },
+      "outputs": [
+        "{options.outputPath}",
+        "{workspaceRoot}/dist/oneview/.nitro",
+        "{workspaceRoot}/dist/oneview/ssr",
+        "{workspaceRoot}/dist/oneview/analog"
+      ],
+      "options": {
+        "main": "oneview/src/main.ts",
+        "configFile": "oneview/vite.config.ts",
+        "outputPath": "dist/oneview/client",
+        "tsConfig": "oneview/tsconfig.app.json"
+      }
+    },
+    "serve": {
+      "executor": "@analogjs/platform:vite-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "oneview:build",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "oneview:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "oneview:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@analogjs/vitest-angular:test",
+      "outputs": [
+        "{projectRoot}/coverage"
+      ]
+    }
+  },
+  "tags": [],
+  "sourceRoot": "./oneview/src"
+}
