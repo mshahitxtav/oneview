@@ -14,7 +14,7 @@ export const noteRouter = router({
     .mutation(
       async ({ input }) => await db.insert(notes).values({ note: input.note }).returning()
     ),
-  list: publicProcedure.query(async () => db.select().from(notes)),
+  list: publicProcedure.query(async () => await db.select().from(notes)),
   remove: publicProcedure
     .input(
       z.object({
