@@ -1,4 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "nx build oneview"
+  "buildCommand": "npx drizzle-kit migrate && nx build oneview"
 }
