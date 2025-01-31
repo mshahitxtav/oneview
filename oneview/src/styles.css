@@ -1,3 +1,5 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,4 +7,62 @@
 html, body {
 display: block;
 height: 100%;
+}
+
+:root {
+--font-sans: ''
+}
+
+:root  {
+  --background: 200.4 100% 95%;
+  --foreground: 200.4 5% 10%;
+  --card: 200.4 90% 100%;
+  --card-foreground: 200.4 5% 15%;
+  --popover: 200.4 100% 95%;
+  --popover-foreground: 200.4 100% 10%;
+  --primary: 200.4 98% 39.4%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 200.4 30% 90%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 162.4 30% 94%;
+  --muted-foreground: 200.4 5% 40%;
+  --accent: 162.4 30% 90%;
+  --accent-foreground: 200.4 5% 15%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 200.4 5% 94%;
+  --border: 200.4 30% 82%;
+  --input: 200.4 30% 50%;
+  --ring: 200.4 98% 39.4%;
+  --radius: 0.5rem;
+  color-scheme: light;
+}
+.dark  {
+  --background: 200.4 50% 10%;
+  --foreground: 200.4 5% 94%;
+  --card: 200.4 50% 10%;
+  --card-foreground: 200.4 5% 94%;
+  --popover: 200.4 50% 5%;
+  --popover-foreground: 200.4 5% 94%;
+  --primary: 200.4 98% 39.4%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 200.4 30% 20%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 162.4 30% 25%;
+  --muted-foreground: 200.4 5% 65%;
+  --accent: 162.4 30% 25%;
+  --accent-foreground: 200.4 5% 94%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 200.4 5% 94%;
+  --border: 200.4 30% 50%;
+  --input: 200.4 30% 50%;
+  --ring: 200.4 98% 39.4%;
+  --radius: 0.5rem;
+  color-scheme: dark;
+}
+
+@layer base {
+  
+  * {
+  @apply border-border;
+  }
 }
