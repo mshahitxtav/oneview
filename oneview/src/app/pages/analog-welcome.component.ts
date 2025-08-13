@@ -4,18 +4,20 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { shareReplay, Subject, switchMap, take } from 'rxjs';
 import { waitFor } from '@analogjs/trpc';
 import { injectTrpcClient } from '../../trpc-client';
+import { HlmButton } from '@spartan-ng/helm/button';
 import { Note } from '../../note';
 
 @Component({
   selector: 'oneview-analog-welcome',
 
-  imports: [AsyncPipe, FormsModule, NgFor, DatePipe, NgIf],
+  imports: [AsyncPipe, FormsModule, NgFor, DatePipe, NgIf, HlmButton],
   host: {
     class:
       'flex min-h-screen flex-col text-zinc-900 bg-zinc-50 px-4 pt-8 pb-32',
   },
   template: `
     <main class="flex-1 mx-auto">
+      <button hlmBtn>Button</button>
       <section class="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
         <div class="flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <img
