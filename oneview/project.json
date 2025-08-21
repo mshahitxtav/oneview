@@ -31,7 +31,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "oneview:build",
-        "port": 4200
+        "port": 4200,
+        "proxyConfig": "oneview/src/proxy.conf.json"
       },
       "configurations": {
         "development": {

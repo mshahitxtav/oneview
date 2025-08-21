@@ -1,0 +1,14 @@
+{
+  "/TPFrontEndServices": {
+    "target": "http://localhost:8080/TPFrontEndServices",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": { "^/TPFrontEndServices": "" }
+  },
+  "/TPAdminServices": {
+    "target": "http://localhost:8080/TPAdminServices",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": { "^/TPAdminServices": "" }
+  }
+}
